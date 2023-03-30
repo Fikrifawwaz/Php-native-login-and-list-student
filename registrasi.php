@@ -30,37 +30,36 @@ if( isset($_POST["register"]) ) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Halaman Registrasi</title>
-	<style>
-		.label{
-			display: block;
-			position: flex;
-			align-items: centers;
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<style type="text/css">
+		.form-signup {
+			margin: 0 auto;
+			max-width: 400px;
+			margin-top: 150px;
 		}
 	</style>
 </head>
 <body>
-
-<h1>Halaman Registrasi</h1>
-
-<form action="" method="post">
-	
-	<ul>
-		<li>
-			<label class="label" for="username">Username : </label>
-			<input type="text" name="username" id="username">
-		</li>
-		<li>
-			<label class="label" for="password">Password : </label>
-			<input type="password" name="password" id="password">
-		</li>
-		<li>
-			<label class="label" for="password2">Konfirmasi Password :</label>
-			<input type="password" name="password2" id="password2">
-			<br><br>
-
-			<button type="submit" name="register" id="register">Register</button>
-		</li>
-	</ul>
+<div class="container">
+<form action="" method="post" class="form-signup">
+		<h1>Halaman Registrasi</h1><br>
+		<div class="form-group">
+			<div class="row">
+				<div class="form-group">
+				<input type="username" class="form-control" name="username" id="username" placeholder="Username">
+				</div>
+				
+				<div class="form-group">
+				<input type="password" class="form-control" name="password" id="password" placeholder="Password">
+				</div>
+		<div class="form-group">
+			<input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password">
+		</div>
+	</div>
+	<br>
+			<button class="btn btn-primary" type="submit" name="register" id="register">Register</button>
+		
 </form>
+</div>
 </body>
 </html>

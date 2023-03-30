@@ -14,21 +14,20 @@ $query = "SELECT * FROM mahasiswa WHERE
 			";
 $mahasiswa = query($query);
 ?>
-<table border="1" cellpadding="30" cellspacing="" style="position: flex;">
-	<tr>
-		<th>No.</th>
-		<th>Aksi</th>
-		<th>Gambar</th>
-		<th>NRP</th>
-		<th>Nama</th>
-		<th>Email</th>
-		<th>Jurusan</th>
-	</tr>
-
+<table border="1" cellpadding="30" cellspacing="" style="position: flex;" class="table table-dark">
+		<tr>
+			<th scope="col">No.</th>
+			<th scope="col">Aksi</th>
+			<th scope="col">Gambar</th>
+			<th scope="col">NRP</th>
+			<th scope="col">Nama</th>
+			<th scope="col">Email</th>
+			<th scope="col">Jurusan</th>
+		</tr>
 	<?php $i = 1; ?>
 	<?php foreach ( $mahasiswa as $row ) :?>
 	<tr>
-		<td><?= $i;  ?></td>
+		<th scope="row"><?= $i;  ?></th>
 		<td>
 			<a href="ubah.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin dek?');">ubah</a> |
 			<a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');">hapus</a>

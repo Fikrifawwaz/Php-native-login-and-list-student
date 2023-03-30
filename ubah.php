@@ -36,41 +36,43 @@ if( isset($_POST["submit"])) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Update data mahasiswa</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
 <body>
+	<div class="container">
 	<h1>Update data mahasiswa</h1>
 
-	<form action="" method="post" enctype="multipart/form-data">
+	<form action="" method="post" enctype="multipart/form-data" class="form-signup">
 		<input type="hidden" name="id" value="<?= $mhs["id"]; ?> ">
 		<input type="hidden" name="gambarLama" value="<?= $mhs["gambar"]; ?>">
-		<ul>
-			<li>
-				<label for="nama">Nama :</label>
-				<input type="text" name="nama" id="nama" required value="<?= $mhs['nama'];?>">
-			</li>
-			<li>
-				<label for="nrp">NRP :</label>
-				<input type="text" name="nrp" id="nrp" required value="<?= $mhs['nrp']; ?>">
-			</li>
-			<li>
-				<label for="email">Email :</label>
-				<input type="text" name="email" id="email" required value="<?= $mhs['email'];?>">
-			</li>
-			<li>
-				<label for="jurusan">Jurusan :</label>
-				<input type="text" name="jurusan" id="jurusan" required value="<?= $mhs['jurusan'];?>">
-			</li>
-			<li>
-				<label for="gambar">Gambar :</label> 
-				<input type="file" name="gambar" id="gambar"><br>
-				<img src="img/<?= $mhs['gambar']; ?>" width="40px"><br>
+				<div class="form-group">
+				<input type="text" class="form-control" name="nama" id="nama" placeholder="nama" required value="<?= $mhs['nama'];?>" >
+				</div>
+			
+				<div class="form-group">
+				<input type="text" class="form-control" name="nrp" id="nrp" placeholder="nrp" required value="<?= $mhs['nrp'];?>" >
+				</div>
+			
+				<div class="form-group">
+				<input type="text" class="form-control" name="email" id="email" placeholder="email" required value="<?= $mhs['email'];?>" >
+				</div>
+				
+				<div class="form-group">
+				<input type="text" class="form-control" name="jurusan" id="jurusan" placeholder="jurusan" required value="<?= $mhs['jurusan'];?>" >
+				</div>
+			
+				<div class="form-group">
+				<input type="file" class="form-control" name="gambar" id="gambar" placeholder="gambar" required value="<?= $mhs['gambar'];?>" >
+				</div>
+				<br>
+				<img src="img/<?= $mhs['gambar']; ?>" width="50px"><br><br>
 
 
-				<button type="submit" name="submit">Ubah Data!</button>
-			</li>
-			<br>
+				<button type="submit" name="submit" class="btn btn-primary">Ubah Data!</button>
+			<br><br>
 			<a href="index.php">Back To Home</a>
 		</ul>
 	</form>
+</div>
 </body>
 </html>

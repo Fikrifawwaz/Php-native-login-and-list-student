@@ -63,31 +63,38 @@ if ( isset($_POST["login"]) ) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<style type="text/css">
+		.form-signup {
+			margin: 0 auto;
+			max-width: 400px;
+			margin-top: 150px;
+		}
+	</style>
 </head>
 <body>
-<h1>Halaman Login</h1>
-
+<div class="container">
+<form action="" method="post" class="form-signup">
+<h1 style="margin-left: 20px;">Halaman Login</h1><br>
 <?php if ( isset($error) ) : ?>
 	<h2 style="color: red; font-style: bold;">username / password salah</h2>
 <?php endif; ?>
+			<div class="mb-3">
+				<label for="username" class="form-label">Username :</label>
+				<input type="text" name="username" id="username">
+			</div>
+			<div class="mb-3">
+				<label for="password" class="form-label">Password :</label>
+				<input type="password" name="password" id="password"><br>
+			</div>
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" name="remember" id="remember">
+				<label for="remember">Remember me</label><br><br>
+			</div>
 
-<ul>
-<form action="" method="post">
-	<li>
-		<label for="username">Username :</label>
-		<input type="text" name="username" id="username">
-	</li>
-	<li>
-		<label for="password">Password :</label>
-		<input type="password" name="password" id="password"><br>
-
-		<input type="checkbox" name="remember" id="remember" style="margin-top: 15px; ">
-		<label for="remember">Remember me</label><br><br>
-
-
-		<button type="submit" name="login">Login</button>
-	</li>
+		<button type="submit" name="login" class="btn btn-primary">Login</button><br> <br>
+		<a class="dropdown-item" href="registrasi.php">New around here? <b>Sign up</b></a>
 </form>
-</ul>
+</div>
 </body>
 </html>

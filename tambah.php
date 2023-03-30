@@ -35,38 +35,35 @@ if( isset($_POST["submit"])) {
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 	<title>Tambah data mahasiswa</title>
+	<style>
+	</style>
 </head>
 <body>
+	<div class="container">
 	<h1>Tambah data mahasiswa</h1>
-
-	<form action="" method="post" enctype="multipart/form-data">
-		<ul>
-			<li>
-				<label for="nama">Nama :</label>
-				<input type="text" name="nama" id="nama" required autocomplete="off">
-			</li>
-			<li>
-				<label for="nrp">NRP :</label>
-				<input type="text" name="nrp" id="nrp" required autocomplete="off">
-			</li>
-			<li>
-				<label for="email">Email :</label>
-				<input type="text" name="email" id="email" required autocomplete="off">
-			</li>
-			<li>
-				<label for="jurusan">Jurusan :</label>
-				<input type="text" name="jurusan" id="jurusan" required autocomplete="off">
-			</li>
-			<li>
-				<label for="gambar">Gambar :</label>
-				<input type="file" name="gambar" id="gambar" required>
+	<form action="" method="post" enctype="multipart/form-data" class="form-signup">
+			<div class="form-group">
+				<input type="text" class="form-control" name="nama" id="nama" placeholder="nama">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" name="nrp" id="nrp" placeholder="nrp">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" name="email" id="email" placeholder="email">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" name="jurusan" id="jurusan" placeholder="jurusan">
+			</div>
+				<input type="file" class="form-control" name="gambar" id="gambar" placeholder="gambar">
 				<br>
-				<button type="submit" name="submit">Submit</button>
+				<button type="submit" name="submit" class="btn btn-primary">Submit</button>
 			</li>
-			<br>
+			<br><br>
 			<a href="index.php">Back To Home</a>
 		</ul>
 	</form>
+</div>
 </body>
 </html>
